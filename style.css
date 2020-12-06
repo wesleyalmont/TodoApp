@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav{
+    width: 100%;
+    height: 50px;
+    background-color: #00be82;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    color: #fff;
+}
+.nav{
+    
+}
+.todo-container{
+    position: relative;
+    top: 3em;
+    margin: 0 auto;
+    max-width: 900px;
+    width: 100%;
+}
+
+.todo-add{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #04c585;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.todo-input{
+    width: 100%;
+    height: 50px;
+    background-color: #dffff5;
+    color: #00be82;
+    font-size: 1.3em;
+    padding-left: 1em;
+    padding-right: 1em;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+}
+
+.todo-add i{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    width: 200px;
+    background-color: #19ffb6;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+.todo-add i:hover{
+    color: white;
+    transition: linear 0.5s;
+    background-color: #00ffae;
+}
+
+.todo-input::placeholder{
+    color: #00ad76;
+}
+
+.todo-list{
+    list-style: none;
+}
+
+.todo-item{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-top: 5px;
+    background-color: rgb(227, 255, 246);
+    border-radius: 10px;
+}
+
+.todo-item .remove{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: white;
+    background-color: rgb(255, 94, 0);
+    border-radius: 100%;
+}
+.todo-item .remove:hover{
+    transition: linear 0.5s;
+    background-color: red;
+}
+.todo-container footer{
+    margin-top: 5px;
+    background-color: aquamarine;
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+    line-height: 1.3em;
+}
