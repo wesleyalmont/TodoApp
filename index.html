@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,15 +8,21 @@
     <link rel="stylesheet" href="style.css">
     <title>ToDoApp</title>
 </head>
+
 <body>
     <nav>
-        <h1>ToDo<span>App</span></h1>   
+        <h1>ToDo<span>App</span></h1>
     </nav>
     <section class="todo-container">
         <div class="todo-add">
             <input type="text" placeholder="what do you want to remember?" class="todo-input">
             <i class="add fas fa-plus-square"></i>
         </div>
+
+        <div class="status" id="status" style="display: none;">
+            <!-- input status will be here -->
+        </div>
+
         <ul class="todo-list">
             <!-- todo list will be here -->
         </ul>
@@ -26,4 +33,5 @@
     </section>
     <script src="app.js"></script>
 </body>
+
 </html>

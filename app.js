@@ -2,17 +2,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const todoList = document.querySelector('.todo-list')
     const todoInput = document.querySelector('.todo-input')
-
-    for ( let i = 0; i <= 10; i++){
-        addToList(i)
-    }
+    const status = document.querySelector('.status')
 
     document.addEventListener('click', (e) => {
         const el = e.target
 
         if (el.classList.contains('add')) {
-            
-            addToList(todoInput.value)
+
+            validateInputText(todoInput)
         }
         if (el.classList.contains('remove')) {
             removeFromList(el)
@@ -29,11 +26,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
         li.innerText = todoInput
         li.appendChild(removeBtn)
-
         todoList.appendChild(li)
+
     }
-    
-    function removeFromList(el){
+
+    function removeFromList(el) {
         el.parentNode.parentNode.removeChild(el.parentNode)
     }
+
+    function validateInputText(todoInput) {
+        if (todoInput.value) {
+            addToList(todoInput.value)
+            todoInput.value = ''
+
+            status.classList.toggle('valid')
+            status.innerText = 'Added'
+            status.style.display = 'block'
+
+        } else {
+            status.classList.toggle('invalid')
+            status.innerText = 'You need to type something!'
+            status.style.display = 'block'
+        }
+
+        setTimeout(() => {
+            status.classList.remove('valid')
+            status.classList.remove('invalid')
+            status.style.display = 'none';
+        }, 2000);
+    }
+
 })

@@ -20,9 +20,7 @@ nav{
     align-items: center;
     color: #fff;
 }
-.nav{
-    
-}
+
 .todo-container{
     position: relative;
     top: 3em;
@@ -35,7 +33,9 @@ nav{
     position: relative;
     display: flex;
     justify-content: space-between;
+    flex: wrap;
     width: 100%;
+    height: auto;
     background-color: #04c585;
     padding: 15px;
     border-radius: 10px;
@@ -102,10 +102,12 @@ nav{
     background-color: rgb(255, 94, 0);
     border-radius: 100%;
 }
+
 .todo-item .remove:hover{
     transition: linear 0.5s;
     background-color: red;
 }
+
 .todo-container footer{
     margin-top: 5px;
     background-color: aquamarine;
@@ -113,4 +115,27 @@ nav{
     padding: 5px;
     border-radius: 10px;
     line-height: 1.3em;
+}
+
+
+.valid, .invalid {
+    margin-top: 5px;
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.valid{
+    color: #003624;
+    background-color: #00fca8;
+    display: none;
+}
+
+.invalid{
+    color: red;
+    background-color: #ffa3a3;
+    display: none;
 }
